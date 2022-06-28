@@ -28,28 +28,28 @@ jobs:
       - run:
           name: Install Front-End 
           command: |
-            npm run install:frontend
+            npm run frontend:install
       # TODO: Install dependencies in the the API          
       - run:
           name: Install API Dependencies
           command: |
-             npm run install:API "
+             npm run API:install 
       # TODO: Lint the frontend
       - run:
           name: Front-End Lint
           command: |
-          npm run lint:frontend
+          npm run frontend:lint
            
       # TODO: Build the frontend app
       - run:
           name: Front-End Build
           command: |
-            npm run build:frontend
+            npm run frontend:build
       # TODO: Build the backend API      
       - run:
           name: API Build
           command: |
-            npm run build:API
+            npm run API:build
   # deploy step will run only after manual approval
   deploy:
     docker:
